@@ -7,7 +7,7 @@
 * max([-1, 0]);   // 0
 */
 const max = arr => {
-  /* your logic here...*/
+  return arr.filter(i => !isNaN(i)&&isFinite(i)).sort()[arr.length-1]
 };
 
 export default max;
