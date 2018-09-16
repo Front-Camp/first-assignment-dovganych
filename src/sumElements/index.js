@@ -11,7 +11,6 @@
  * sumElements([Infinity, NaN, 1]); // 1
  */
 const sumElements = arr => {
-  return arr.map(i => Number(i)).filter(i => !isNaN(i) && isFinite(i)).reduce((a, b) => a + b, 0)
-};
-
+  return arr.map(i => Number(i) ? Number(i) : parseFloat(i)).filter(i => !isNaN(i) && isFinite(i)).reduce((a, b) => a + b, 0)
+}
 export default sumElements;

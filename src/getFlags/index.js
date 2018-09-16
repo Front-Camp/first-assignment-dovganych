@@ -6,7 +6,7 @@
  * getFlags(arr); // [1, 2, 3, 4, 5, 6]
  */
 const getFlags = arr => {
-  /* your logic here...*/
+  return arr.map(i => Object.values(i)).toString().split(',').map(i => parseInt(i));
 };
 
 export default getFlags;
